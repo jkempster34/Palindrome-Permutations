@@ -19,5 +19,7 @@ namespace PalindromePermutations.Utilities
                 return string.Empty;
             }
         }
+
+        public static bool IsCharacterCountOdd(this string text) => text.Length % 2 == 1;
     }
 }
