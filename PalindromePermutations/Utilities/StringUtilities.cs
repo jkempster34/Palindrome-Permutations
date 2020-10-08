@@ -20,6 +20,13 @@ namespace PalindromePermutations.Utilities
             }
         }
 
+        public static string ReverseString(this string text)
+        {
+            char[] arr = text.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
+        }
+
         public static bool IsCharacterCountOdd(this string text) => text.Length % 2 == 1;
     }
 }
