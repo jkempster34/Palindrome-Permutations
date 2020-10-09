@@ -1,6 +1,6 @@
-﻿namespace PalindromePermutations.Utilities
+﻿namespace PalindromePermutations.Extensions
 {
-    public static class IntUtilities
+    public static class IntExtensions
     {
         public static bool IsOdd(this int number) => number % 2 == 1;
     }

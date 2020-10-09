@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace PalindromePermutations.Utilities
+namespace PalindromePermutations.Extensions
 {
-    public static class StringUtilities
+    public static class StringExtensions
     {
         public static string CleanString(this string stringToClean)
         {
@@ -20,11 +20,11 @@ namespace PalindromePermutations.Utilities
             }
         }
 
-        public static string ReverseString(this string text)
+        public static string ReverseString(this string stringToReverse)
         {
-            char[] arr = text.ToCharArray();
-            Array.Reverse(arr);
-            return new string(arr);
+            char[] characters = stringToReverse.ToCharArray();
+            Array.Reverse(characters);
+            return new string(characters);
         }
 
         public static bool IsCharacterCountOdd(this string text) => text.Length % 2 == 1;

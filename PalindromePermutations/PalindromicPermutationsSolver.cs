@@ -1,20 +1,20 @@
-﻿using PalindromePermutations.Utilities;
+﻿using PalindromePermutations.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace PalindromePermutations
 {
-    public static class PalindromePermutationsSolver
+    public static class PalindromicPermutationsSolver
     {
-        public static bool TryGeneratePalindromicPermutations(string text, out List<string> palindromes)
+        public static bool TryGenerate(string text, out List<string> palindromes)
         {
             string cleanInput = text.CleanString();
             bool isCharacterCountOdd = cleanInput.IsCharacterCountOdd();
 
             Dictionary<char, int> letterCount = GroupSameLetters(cleanInput);
 
-            if (!IsPalindromicPermutation(letterCount, isCharacterCountOdd))
+            if (!CanFormPalindrome(letterCount, isCharacterCountOdd))
             {
                 palindromes = null;
                 return false;
@@ -69,7 +69,7 @@ namespace PalindromePermutations
             }
         }
 
-        private static bool IsPalindromicPermutation(Dictionary<char, int> letterCount, bool isCharacterCountOdd)
+        private static bool CanFormPalindrome(Dictionary<char, int> letterCount, bool isCharacterCountOdd)
         {
             int oddLetterCount = 0;
 

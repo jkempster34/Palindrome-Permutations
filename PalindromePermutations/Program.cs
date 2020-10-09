@@ -10,7 +10,7 @@ namespace PalindromePermutations
             Console.Write("Enter string to get palindromic permutations: ");
             string text = Console.ReadLine();
 
-            if (PalindromePermutationsSolver.TryGeneratePalindromicPermutations(text, out List<string> palindromes))
+            if (PalindromicPermutationsSolver.TryGenerate(text, out List<string> palindromes))
             {
                 Console.WriteLine("The palindromes produced from your text are: ");
                 foreach (var palindrome in palindromes)
@@ -18,7 +18,7 @@ namespace PalindromePermutations
             }
             else
             {
-                Console.WriteLine("No permutations of this text contain palindromes.");
+                Console.WriteLine("This text cannot form any palindromes.");
             }
 
             Console.ReadKey();
